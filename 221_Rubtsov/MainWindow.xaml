@@ -5,8 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_221_Rubtsov"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="{Binding ElementName=MainFrame, Path=Content.Title}" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45"/>
+            <RowDefinition/>
+            <RowDefinition Height="45"/>
+        </Grid.RowDefinitions>
+
+        <Button x:Name="ButtonBack" Grid.Row="0" Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Center" Click="ButtonBack_Click" />
+
+        <Frame x:Name="MainFrame" Source="Pages/AuthPage.xaml" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" NavigationUIVisibility="Hidden"/>
+
+        <TextBlock x:Name="DateAndTime" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center" Text="23.10.2024 15:09:23"/>
     </Grid>
 </Window>
