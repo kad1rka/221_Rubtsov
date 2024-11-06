@@ -6,8 +6,9 @@
       xmlns:local="clr-namespace:_221_Rubtsov.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="360" d:DesignWidth="500"
+      d:Background="White"
       Title="Авторизация">
-    <Grid Margin="20" Background="White">
+    <Grid Margin="20">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -18,19 +19,20 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Text="Авторизация" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10"/>
+        <TextBlock Text="Авторизация" FontSize="18" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10"/>
 
         
         <Label Grid.Row="1" Content="Логин:" HorizontalAlignment="Left" Margin="0,10"/>
 
 
-        <TextBox Grid.Row="2" Name="loginTextBox" Background="Transparent" HorizontalAlignment="Stretch" Margin="0,5"/>
+        <TextBox Grid.Row="2" Name="loginTextBox" HorizontalAlignment="Stretch" Margin="0,5"/>
 
         <Label Grid.Row="3" Content="Пароль:" HorizontalAlignment="Left" Margin="0,10"/>
 
         <PasswordBox Grid.Row="4" Name="passwordBox" HorizontalAlignment="Stretch" Margin="0,5" />
 
-        <Button x:Name="EnterButton" Grid.Row="5" Content="Войти" HorizontalAlignment="Center" Margin="0,10" Click="EnterButton_Click" />
+        <Button x:Name="EnterButton" Grid.Row="5" Content="Войти" HorizontalAlignment="Right"  Margin="0,0, 60, 0"  Click="EnterButton_Click" />
+        <Button x:Name="RegButton" Grid.Row="5" Content="Регистрация" HorizontalAlignment="Left" Margin="60,10" Click="RegButton_Click"/>
 
     </Grid>
 </Page>

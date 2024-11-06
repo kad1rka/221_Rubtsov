@@ -6,7 +6,8 @@
       xmlns:local="clr-namespace:_221_Rubtsov.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Страница администратора">
+      Title="Страница администратора"
+      >
 
     <Grid>
         <TextBlock Text="Это страница администратора." FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center"/>

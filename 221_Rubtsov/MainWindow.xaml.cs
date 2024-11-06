@@ -25,6 +25,7 @@ namespace _221_Rubtsov
         public MainWindow()
         {
             InitializeComponent();
+            this.Background = new SolidColorBrush(Color.FromRgb(181, 213, 202));
             DispatcherTimer timer = new DispatcherTimer();
             timer.Interval = TimeSpan.FromSeconds(1);
             timer.Tick += timer_tick;

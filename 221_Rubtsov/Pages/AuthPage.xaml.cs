@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -35,14 +36,14 @@ namespace _221_Rubtsov.Pages
 
             using (var db = new Entities())
             {
-                var user = db.User.AsNoTracking().FirstOrDefault(u => u.Login == loginTextBox.Text && u.Password == passwordBox.Password);
+                String HashPass = GetHash(passwordBox.Password);
+                var user = db.User.AsNoTracking().FirstOrDefault(u => u.Login == loginTextBox.Text && u.Password == HashPass);
 
                 if (user == null)
                 {
                     MessageBox.Show("Пользователь с такими данными не найден!");
                     return;
                 }
-
 
                 switch(user.Role)
                 {
@@ -54,6 +55,25 @@ namespace _221_Rubtsov.Pages
                         break;
                 }
             }
+        }
+        public static string GetHash(string password)
+
+        {
+
+            using (var hash = SHA1.Create())
+
+            {
+
+                return string.Concat(hash.ComputeHash(Encoding.UTF8.GetBytes(password)).Select(x => x.ToString("X2")));
+
+            }
+
+        }
+
+        private void RegButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new RegPage());
+
         }
     }
 }

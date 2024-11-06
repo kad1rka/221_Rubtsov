@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_221_Rubtsov"
         mc:Ignorable="d"
-        Title="{Binding ElementName=MainFrame, Path=Content.Title}" Height="450" Width="800">
+        Title="{Binding ElementName=MainFrame, Path=Content.Title}" Height="460" Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="45"/>
@@ -13,7 +13,7 @@
             <RowDefinition Height="45"/>
         </Grid.RowDefinitions>
 
-        <Button x:Name="ButtonBack" Grid.Row="0" Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Center" Click="ButtonBack_Click" />
+        <Button x:Name="ButtonBack" Height="45" Width="120" Grid.Row="0" Content="Назад" HorizontalAlignment="Left" Click="ButtonBack_Click" />
 
         <Frame x:Name="MainFrame" Source="Pages/AuthPage.xaml" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" NavigationUIVisibility="Hidden"/>
 
