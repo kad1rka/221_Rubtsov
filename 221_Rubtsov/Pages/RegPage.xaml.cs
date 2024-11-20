@@ -98,6 +98,7 @@ namespace _221_Rubtsov
 
             for (int i = 0; i < password.Length; i++) // перебираем символы
             {
+                if (password[i] >= 'а' && password[i] <= 'я' ) en = false;
                 if (password[i] >= 'А' && password[i] <= 'Я') en = false; // если русская раскладка
             }
             if (en == false) 

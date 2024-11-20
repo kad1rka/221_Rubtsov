@@ -19,7 +19,7 @@
 
         </Grid.RowDefinitions>
 
-        <DataGrid Grid.Row="0"  Name="DataGridUser" d:ItemsSource="{d:SampleData ItemCount=5}" AutoGenerateColumns="False" IsReadOnly="True">
+        <DataGrid Grid.Row="0"  Name="DataGridUser" d:ItemsSource="{d:SampleData ItemCount=5}" AutoGenerateColumns="False" IsReadOnly="True" >
 
             <DataGrid.Columns>
 
@@ -40,7 +40,7 @@
 
                         <DataTemplate>
 
-                            <Button Name="ButtonEdit" Margin="5" Padding="0" FontSize="12" Content="Редактировать" Width="90"  HorizontalAlignment="Left" Height="20"/>
+                            <Button Name="ButtonEdit" Margin="5" Padding="0" FontSize="12" Content="Редактировать" Width="90" Click="ButtonEdit_Click"  HorizontalAlignment="Left" Height="20"/>
 
                         </DataTemplate>
 

@@ -15,8 +15,8 @@
 
         <Button x:Name="ButtonBack" Height="45" Width="120" Grid.Row="0" Content="Назад" HorizontalAlignment="Left" Click="ButtonBack_Click" />
 
-        <Frame x:Name="MainFrame" Source="Pages/AdminPage.xaml" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" NavigationUIVisibility="Hidden"/>
+        <Frame x:Name="MainFrame" Source="Pages/AuthPage.xaml" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" NavigationUIVisibility="Hidden"/>
 
-        <TextBlock x:Name="DateAndTime" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center" Text="23.10.2024 15:09:23"/>
+        <TextBlock x:Name="DateAndTime" Grid.Row="2" HorizontalAlignment="Right" Margin="10" VerticalAlignment="Center"/>
     </Grid>
 </Window>
