@@ -26,7 +26,7 @@ namespace _221_Rubtsov.Pages
             InitializeComponent();
             if (selectedUser != null)
             {
-                _currentUser = selectedUser;
+                _currentUser = selectedUser;    
                 cmbRole.Text = selectedUser.Role;
             }
             
